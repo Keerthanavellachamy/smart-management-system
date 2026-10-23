@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Campus Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">SC</div><div><strong>SmartCampus</strong><small>Digital Campus</small></div></div>
+    <nav>
+      <button class="nav-item active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav-item" data-page="students">👨‍🎓 <span>Students</span></button>
+      <button class="nav-item" data-page="faculty">👩‍🏫 <span>Faculty</span></button>
+      <button class="nav-item" data-page="courses">📚 <span>Courses</span></button>
+      <button class="nav-item" data-page="attendance">📝 <span>Attendance</span></button>
+      <button class="nav-item" data-page="classrooms">🏫 <span>Classrooms</span></button>
+      <button class="nav-item" data-page="transport">🚌 <span>Transport</span></button>
+      <button class="nav-item" data-page="library">📖 <span>Library</span></button>
+      <button class="nav-item" data-page="events">📅 <span>Events</span></button>
+      <button class="nav-item" data-page="achievements">🏆 <span>Achievements</span></button>
+      <button class="nav-item" data-page="sustainability">🌱 <span>Green Campus</span></button>
+      <button class="nav-item" data-page="support">🆘 <span>Emergency & Support</span></button>
+    </nav>
+    <div class="side-bottom"><button class="nav-item" data-page="settings">⚙ <span>Settings</span></button><div class="tagline">One Campus.<br>One Platform.<br><b>A Smarter Tomorrow.</b></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="hamburger" id="menuBtn">☰</button>
+      <div class="search-wrap"><span>⌕</span><input id="globalSearch" placeholder="Search students, books, courses, events..."></div>
+      <div class="top-actions"><button id="themeBtn" class="icon-btn" title="Toggle theme">☾</button><button class="icon-btn" id="bellBtn">🔔<i>3</i></button><div class="avatar">KV</div></div>
+    </header>
+
+    <section id="content"></section>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="modal"><div class="modal-card"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+<button class="assistant" id="assistantBtn">🤖</button>
+<div class="chatbox" id="chatbox"><div class="chat-head">Smart Campus Assistant <button onclick="toggleChat()">×</button></div><div class="chat-body" id="chatBody"><div class="bot">Hi! Ask me about attendance, events, buses, or library books.</div></div><div class="chat-input"><input id="chatInput" placeholder="Ask something..."><button id="chatSend">➤</button></div></div>
+<script src="js/script.js"></script>
+</body>
+</html>
